@@ -2,7 +2,7 @@
 """
 Created on Mon Mar 16 15:35:20 2026
 
-@author: User
+@author: DIKSHA
 """
 
 def display_seating(rows, seats_per_row):
