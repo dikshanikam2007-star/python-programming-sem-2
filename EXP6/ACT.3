@@ -1,0 +1,30 @@
+#Count number of words in a report file.
+"""
+Created on Mon Mar 23 15:48:56 2026
+
+@author: DIKSHA
+"""
+
+import os
+
+filename = "report.txt"
+
+def count_words():
+    # 1. Check if the file exists
+    if os.path.exists(filename):
+        with open(filename, "r") as file:
+            # 2. Read the entire content
+            content = file.read()
+            
+            # 3. Split the content into a list of words
+            words = content.split()
+            
+            # 4. Get the length of the list
+            word_count = len(words)
+            
+            print(f"The file '{filename}' contains {word_count} words.")
+    else:
+        print(f"Error: The file '{filename}' was not found.")
+
+# Run the function
+count_words()
