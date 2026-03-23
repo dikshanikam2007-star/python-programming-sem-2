@@ -1,0 +1,29 @@
+# A traffic police system checks if a driver is overspeeding. If speed > 60 km/h, show fine MESSAGE200
+"""
+Created on Mon Mar 23 16:03:46 2026
+
+@author: DIKSHA
+"""
+
+def check_speed():
+    limit = 60
+    
+    try:
+        # 1. Input current speed
+        current_speed = float(input("Enter current speed (km/h): "))
+
+        # 2. Compare speed against the limit
+        if current_speed > limit:
+            # Calculate how much they are over the limit
+            excess = current_speed - limit
+            print(f"--- FINE ISSUED ---")
+            print(f"Overspeeding detected! You are {excess} km/h over the limit.")
+            print("Please pay the fine at the nearest traffic booth.")
+        else:
+            print("Speed is within the limit. Drive safely!")
+
+    except ValueError:
+        print("Invalid entry. Please enter a numerical value for speed.")
+
+# Run the check
+check_speed()
