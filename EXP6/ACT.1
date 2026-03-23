@@ -1,0 +1,26 @@
+# Create a student attendance file and append new records.
+"""
+Created on Mon Mar 23 15:22:22 2026
+
+@author: DIKSHA
+"""
+
+import os
+
+filename = "attendance.txt"
+
+def record_attendance():
+    # 1. Collect data from the user
+    name = input("Enter Student Name: ")
+    status = input("Enter Status (Present/Absent/Late): ")
+    date = input("Enter Date (DD-MM-YYYY): ")
+
+    # 2. Append the record to the file
+    # 'a' mode creates the file if it doesn't exist and adds to the end if it does
+    with open(filename, "a") as file:
+        file.write(f"{date} | {name} | {status}\n")
+    
+    print(f"Record for {name} saved successfully!")
+
+# Run the record function
+record_attendance()
