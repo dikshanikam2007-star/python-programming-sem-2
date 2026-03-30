@@ -12,7 +12,3 @@ print("Simple Interest is:",interest)
 
 
 
-Enter principle amount:1000
-Enter rate of interest:5
-Enter time(in years):2
-Simple Interest is: 100.0
