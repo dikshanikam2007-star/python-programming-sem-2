@@ -1,34 +1,16 @@
 #A teacher stores marks of students in a list. Find average and topper marks.
 """
 Created on Mon Mar 16 15:40:11 2026
-
 @author: DIKSHA
 """
 
-def analyze_marks(student_marks):
-    # 1. Check if the list is empty to avoid errors
-    if not student_marks:
-        return "No marks recorded."
+marks = [85, 92, 78, 95, 88, 70, 99]
+topper_marks = max(marks)
 
-    # 2. Calculate Total and Average
-    total_marks = sum(student_marks)
-    count = len(student_marks)
-    average = total_marks / count
+total_sum = sum(marks)
+num_students = len(marks)
+average_marks = total_sum / num_students
 
-    # 3. Identify Topper and Lowest marks
-    topper = max(student_marks)
-    lowest = min(student_marks)
-
-    return average, topper, lowest
-
-# --- Sample Data ---
-# Marks for a class of 8 students
-marks_list = [85, 92, 78, 95, 88, 70, 99, 82]
-
-avg, top, low = analyze_marks(marks_list)
-
-print(f"--- Class Performance Report ---")
-print(f"Total Students: {len(marks_list)}")
-print(f"Average Score: {avg:.2f}")
-print(f"Topper Score: {top}")
-print(f"Lowest Score: {low}")
+print(f"Total Students: {num_students}")
+print(f"Topper Marks: {topper_marks}")
+print(f"Average Marks: {average_marks:.2f}")
