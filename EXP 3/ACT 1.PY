@@ -4,8 +4,8 @@ Created on Mon Mar 16 14:52:20 2026
 
 @author: DIKSHA
 """
-num_receipts = 3
-items_per_receipt = 4
+num_receipts = 2
+items_per_receipt = 2
 
 for receipt_num in range(1, num_receipts + 1):
     print(f"--- Receipt #{receipt_num} ---")
