@@ -1,27 +1,15 @@
 # A library dictionary stores book name and price. Update book price.
 """
 Created on Mon Mar  9 15:51:47 2026
-
-@author: DIKSHA NIKAM
+@author: DIKSHA 
 """
 
-# Initial dictionary
-library = {
-    "The Great Gatsby": 15.99,
-    "1984": 12.50,
-    "The Hobbit": 20.00
+library_catalog = {
+    "The Great Gatsby": 450,
+    "1984": 300,
+    "The Hobbit": 550,
 }
-
-# Updating the price of "1984"
-library["1984"] = 10.99
-
-book_to_update = "The Hobbit"
-new_price = 18.50
-
-if book_to_update in library:
-    library[book_to_update] = new_price
-    print(f"Updated {book_to_update} price to ${new_price}")
-else:
-    print("Book not found in the library.")
-
-    
+print(f"Old Price of 1984: ₹{library_catalog['1984']}")
+library_catalog["1984"] = 325
+library_catalog["Atomic Habits"] = 400
+print(f"Updated Catalog: {library_catalog}")
