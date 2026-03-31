@@ -2,24 +2,14 @@
 """
 Created on Mon Mar 23 16:01:57 2026
 
-@author: User
+@author: DIKSHA
 """
 
-def check_loan_eligibility():
-    # 1. Input the monthly salary
-    try:
-        salary = float(input("Enter your monthly salary (in ₹): "))
+# Taking input from the user
+salary = int(input("Enter your monthly salary: "))
 
-        # 2. Check the condition (Salary must be 25,000 or more)
-        if salary >= 25000:
-            print("Status: Approved")
-            print("Congratulations! You meet the minimum income requirement.")
-        else:
-            print("Status: Rejected")
-            print(f"Sorry, you need a minimum salary of ₹25,000. You are short by ₹{25000 - salary:.2f}.")
-
-    except ValueError:
-        print("Invalid input! Please enter a numeric value for salary.")
-
-# Run the program
-check_loan_eligibility()
+# Checking the condition
+if salary >= 25000:
+    print("Approved")
+else:
+    print("Rejected")
