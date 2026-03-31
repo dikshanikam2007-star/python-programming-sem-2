@@ -1,24 +1,16 @@
 # A movie ticket system allows entry only if age ≥ 18. Write a program to check eligibility.
 """
 Created on Mon Mar 23 16:00:26 2026
-
 @author: DIKSHA
 """
 
 def check_movie_eligibility():
-    # 1. Get the user's age
-    # We use int() because input() always returns text (a string)
     try:
         age = int(input("Please enter your age: "))
-
-        # 2. Check the condition (Age must be 18 or older)
         if age >= 18:
             print("Access Granted. Enjoy the movie!")
         else:
-            print("Access Denied. You must be at least 18 years old.")
-            
+            print("Access Denied. You must be at least 18 years old.")            
     except ValueError:
         print("Invalid input. Please enter a number for your age.")
-
-# Run the check
 check_movie_eligibility()
