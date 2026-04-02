@@ -1,31 +1,21 @@
 # Read a complaint file and display all complaints.
 """
 Created on Mon Mar 23 15:39:33 2026
-
 @author: DIKSHA
 """
-
 import os
-
 filename = "complaints.txt"
-
 def display_complaints():
-    # 1. Check if the file exists before trying to open it
+   
     if os.path.exists(filename):
-        print("--- ALL REGISTERED COMPLAINTS ---")
-        
-        # 2. Open the file in 'r' (read) mode
+        print("--- ALL REGISTERED COMPLAINTS ---")     
         with open(filename, "r") as file:
             content = file.read()
-            
-            # 3. Check if the file is empty
+    
             if not content.strip():
                 print("The complaint file is currently empty.")
             else:
-                print(content)
-                
+                print(content)          
     else:
         print(f"Error: The file '{filename}' was not found.")
-
-# Run the function
 display_complaints()
