@@ -13,8 +13,8 @@ def register_user(age_input):
         
         if age < 18:
             raise ValueError("Registration failed: You must be at least 18 years old.")
-        if age > 120:
-            raise ValueError("Registration failed: Please enter a valid age (max 120).")
+        if age > 100:
+            raise ValueError("Registration failed: Please enter a valid age (max 100).")
             
         print(f"Success! Age {age} is verified. Proceeding to account creation...")
 
