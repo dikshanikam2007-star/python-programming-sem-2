@@ -9,7 +9,7 @@ def split_bill():
     print("--- Restaurant Bill Splitter ---")
     
     try:
-     total_bill = float(input("Enter the total bill amount: rupees$"))
+     total_bill = float(input("Enter the total bill amount:"))
      num_people = int(input("Enter the number of people: "))
 
      if num_people == 0:
@@ -18,7 +18,7 @@ def split_bill():
          raise ValueError("The number of people cannot be negative.")
 
      share = total_bill / num_people
-     print(f"Each person should pay: rupees${share:.2f}")
+     print(f"Each person should pay: {share:.2f}")
 
     except ZeroDivisionError as e:
         print(f"Math Error: {e}")
