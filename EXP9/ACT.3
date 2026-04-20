@@ -1,0 +1,28 @@
+#Generate OTP using random module.
+"""
+Created on Mon Apr 20 15:23:48 2026
+
+@author: DIKSHA
+"""
+
+import random
+import math
+import datetime
+
+def generate_attendance_otp():
+    now = datetime.datetime.now()
+    weekday = now.strftime("%A")
+    timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+    otp = random.randint(100000, 999999)
+    checksum = math.sqrt(otp)
+
+    print("OFFICE ATTENDANCE SYSTEM")
+    print(f"CURRENT DAY: {weekday}")
+    print(f"TIMESTAMP: {timestamp}")
+    print(f"YOUR SECURE OTP: {otp}")
+    print(f"VERIFICATION ID: {math.floor(checksum)}") 
+    print("Note: This OTP expires in 1 minutes.")
+
+if __name__ == "__main__":
+    generate_attendance_otp()
+    
