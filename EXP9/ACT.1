@@ -1,0 +1,12 @@
+#Display today's date in a hospital appointment system.
+"""
+Created on Mon Apr 20 15:07:53 2026
+
+@author: DIKSHA
+"""
+import datetime
+today= datetime.datetime.now()
+
+appointment_date = today.strftime("%A, %B %d, %Y") 
+print(f"Appointment Date: {appointment_date}")
+
