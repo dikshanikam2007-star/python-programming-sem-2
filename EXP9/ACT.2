@@ -1,0 +1,32 @@
+#Show weekday in office attendance app.
+"""
+Created on Mon Apr 20 15:16:51 2026
+
+@author: DIKSHA
+"""
+
+import math
+import datetime
+
+def office_attendance_logger():
+    now = datetime.datetime.now()
+    weekday = now.strftime("%A")
+    formatted_date = now.strftime("%B %d, %Y")
+    current_time = now.strftime("%I:%M %p")
+
+    print("--- CORPORATE ATTENDANCE PORTAL ---")
+    print(f"WEEKDAY: {weekday}")
+    print(f"DATE:    {formatted_date}")
+    print(f"TIME:    {current_time}")
+
+    hours_worked = 5.75
+    shift_total = 8.0
+    remaining = shift_total - hours_worked
+    
+    print(f"STATUS:  Active Session")
+    print(f"WORKED:  {hours_worked} hours")
+    print("Log-in successful. Have a productive day!")
+if __name__ == "__main__":
+    office_attendance_logger()
+    
+    
