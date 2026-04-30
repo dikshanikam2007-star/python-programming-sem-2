@@ -1,0 +1,21 @@
+# Create a Streamlit grocery bill calculator.
+"""
+Created on Thu Apr 30 10:33:19 2026
+
+@author: DIKSHA
+"""
+
+import streamlit as st
+
+st.title("Simple Grocery Calc")
+
+# Input fields for 3 items
+item1_price = st.number_input("Price of Item 1", min_value=0.0)
+item2_price = st.number_input("Price of Item 2", min_value=0.0)
+item3_price = st.number_input("Price of Item 3", min_value=0.0)
+
+# Simple math
+total = item1_price + item2_price + item3_price
+
+# Display result
+st.write(f"### Total Bill: {total:.2f}") 
